@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Repo delete</title>
+  </head>
+  <body>
+    <h1 id="hidden-text">Hidden Text</h1>
+    <input id="input-filed" type="text" placeholder="please type delete" />
+    <button id="btn-delete" disabled>delete</button>
+    <script>
+      const inputFiled = document.getElementById("input-filed");
+      const deleteBtn = document.getElementById("btn-delete");
+      const hiddenText = document.getElementById("hidden-text");
+      inputFiled.addEventListener("keyup", (e) => {
+        if (e.target.value === "delete") {
+          deleteBtn.removeAttribute("disabled");
+        } else {
+          deleteBtn.setAttribute("disabled", "");
+        }
+        console.log(e.target.value);
+      });
+      deleteBtn.addEventListener("click", () => {
+        hiddenText.style.display = "none";
+      });
+    </script>
+  </body>
+</html>

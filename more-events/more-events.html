@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>More Events</title>
+  </head>
+  <body>
+    <h2>Explore more Events</h2>
+    <button id="btn-more">Events</button>
+    <input id="text-filed" type="text" />
+    <script>
+      // input events
+
+      document.getElementById("text-filed").addEventListener("focus", () => {
+        // console.log("Input field focus Event tiered");
+      });
+      document.getElementById("text-filed").addEventListener("blur", () => {
+        // console.log("Input field blur Event tiered");
+      });
+      document.getElementById("text-filed").addEventListener("keyup", (e) => {
+        // console.log(e.target.value);
+      });
+      document.getElementById("text-filed").addEventListener("keydown", (e) => {
+        // console.log(e.target.value);
+      });
+      document
+        .getElementById("text-filed")
+        .addEventListener("keypress", (e) => {
+          console.log(e.target.value);
+        });
+      // mouse events
+      document.getElementById("btn-more").addEventListener("mouseenter", () => {
+        // console.log("Event tiered");
+      });
+      document.getElementById("btn-more").addEventListener("mousemove", () => {
+        // console.log("Event tiered");
+      });
+      document.getElementById("btn-more").addEventListener("mousedown", () => {
+        // console.log("Event tiered");
+      });
+      document.getElementById("btn-more").addEventListener("mouseup", () => {
+        // console.log("Event tiered");
+      });
+      document.getElementById("btn-more").addEventListener("mouseover", () => {
+        // console.log("Event tiered");
+      });
+      document.getElementById("btn-more").addEventListener("mouseenter", () => {
+        console.log("Event tiered");
+      });
+    </script>
+    <script src="more-events.js"></script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delegate</title>
+  </head>
+  <body>
+    <section>
+      <ul id="list-container">
+        <li class="item">Lorem ipsum dolor sit amet.</li>
+        <li class="item">Tenetur numquam voluptates est voluptatem!</li>
+        <li class="item">Quaerat quidem inventore illum nobis.</li>
+        <li class="item">Possimus aperiam quos facilis cupiditate?</li>
+        <li class="item">Vero voluptatibus nobis ab illum.</li>
+      </ul>
+      <button id="btn-add">add new item</button>
+    </section>
+    <script>
+      const items = document.getElementsByClassName("item");
+      //   for (const item of items) {
+      //     item.parentNode.addEventListener("click", (e) => {
+      //       e.target.parentNode.removeChild(e.target);
+      //     });
+      //   }
+      document
+        .getElementById("list-container")
+        .addEventListener("click", (e) => {
+          e.target.parentNode.removeChild(e.target);
+        });
+      document.getElementById("btn-add").addEventListener("click", () => {
+        const newLi = document.createElement("li");
+        newLi.innerText = "new list item";
+        newLi.classList.add("item");
+        document.getElementById("list-container").appendChild(newLi);
+      });
+    </script>
+  </body>
+</html>
